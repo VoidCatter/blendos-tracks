@@ -27,6 +27,7 @@ aur-packages:
 
 services:
   - 'power-profiles-daemon'
+  - 'greetd'
 
 user-services:
   - 'dms'
@@ -34,3 +35,13 @@ user-services:
 commands:
   - 'rm -f /usr/share/applications/Waydroid.desktop'    
   - 'mkdir -p /etc/xdg/xdg-desktop-portal'
+  - 'mkdir -p /etc/greetd'
+  - |
+    cat << EOF > /etc/greetd/config.toml
+    [terminal]
+    vt = 1
+
+    [default_session]
+    user = "greeter"
+    command = "/usr/bin/dms-greeter --command hyprland"
+    EOF
