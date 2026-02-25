@@ -5,7 +5,7 @@ track: 'blendos-base'
 packages:
   - 'kitty'
   - 'gparted'
-  - 'vivaldi'
+  - 'firefox'
   - 'cosmic-files'
   - 'cosmic-player'
   - 'cosmic-text-editor'
@@ -24,28 +24,13 @@ packages:
 aur-packages: 
   - 'dms-shell-git'
   - 'greetd-dms-greeter-git'
+
 services:
-  - 'sddm'
+  - 'power-profiles-daemon'
+
+user-services:
+  - 'dms'
 
 commands:
-  - 'rm -f /usr/share/applications/Waydroid.desktop'
-  - 'usermod -aG video'
-  - |
-    cat << EOF > /usr/lib/sddm/sddm.conf.d/no-gnome-initial-setup.conf
-    [Users]
-    HideUsers=gnome-initial-setup
-    EOF
-    
-    
-    
-
-packages:
-  - accountsservice
-  - quickshell
-  - go
-
-
-
-services: []
-
-user-services: []
+  - 'rm -f /usr/share/applications/Waydroid.desktop'    
+  - 'mkdir -p /etc/xdg/xdg-desktop-portal'
