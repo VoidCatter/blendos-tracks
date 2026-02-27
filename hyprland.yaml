@@ -33,6 +33,7 @@ user-services:
   - 'dms'
 
 commands:
+  - 'id greeter || useradd -r -s /usr/bin/nologin greeter'
   - 'rm -f /usr/share/applications/Waydroid.desktop'    
   - 'mkdir -p /etc/xdg/xdg-desktop-portal'
   - 'mkdir -p /etc/greetd'
@@ -48,5 +49,5 @@ commands:
 
     [default_session]
     user = "greeter"
-    command = "/usr/bin/dms-greeter --command hyprland"
+    command = "/usr/bin/dms-greeter --command Hyprland"
     EOF
