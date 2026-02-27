@@ -50,5 +50,5 @@ commands:
 
     [default_session]
     user = "greeter"
-    command = "/usr/bin/dms-greeter --command Hyprland"
+    command = "/usr/bin/dms-greeter --command hyprland"
     EOF
