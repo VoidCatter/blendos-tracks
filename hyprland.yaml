@@ -38,10 +38,11 @@ commands:
   - 'mkdir -p /etc/xdg/xdg-desktop-portal'
   - 'mkdir -p /etc/greetd'
 
-  - 'mkdir -p /var/cache/dms-greeter'
-  - 'chown greeter:greeter /var/cache/dms-greeter'
-  - 'chmod 755 /var/cache/dms-greeter'
-  
+  - |
+    cat << EOF > /usr/lib/tmpfiles.d/dms-greeter.conf
+    d /var/cache/dms-greeter 0755 greeter greeter -
+    EOF
+
   - |
     cat << EOF > /etc/greetd/config.toml
     [terminal]
