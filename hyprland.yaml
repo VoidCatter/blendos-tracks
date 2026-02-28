@@ -22,15 +22,12 @@ packages:
   - 'waydroid-image'
 
 aur-packages: 
-  - 'dms-shell-git'
+  - 'dms-shell-hyprland'
   - 'greetd-dms-greeter-git'
 
 services:
   - 'power-profiles-daemon'
   - 'greetd'
-
-user-services:
-  - 'dms'
 
 commands:
   - 'id greeter || useradd -r -s /usr/bin/nologin greeter'
