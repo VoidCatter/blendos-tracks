@@ -27,8 +27,6 @@ packages:
   - 'qt6ct'
   - 'wtype'
   - 'cliphist'
-  - ''
-
 
 aur-packages: 
   - 'dsearch-git'
