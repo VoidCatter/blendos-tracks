@@ -9,23 +9,30 @@ packages:
   - 'cosmic-files'
   - 'cosmic-player'
   - 'cosmic-text-editor'
-  - 'waydroid-image'
   - 'waydroid'
+  - 'waydroid-image'
 
-  - 'qt6ct'
+  - 'hyprland'
   - 'pipewire'
-  - 'i2c-tools'
   - 'wireplumber'
-  - 'qt6-multimedia'
   - 'xdg-desktop-portal'
-  - 'power-profiles-daemon'
   - 'xdg-desktop-portal-wlr'
-  - 'ttf-material-symbols-variable'
-  - 'ttf-fira-code'
-  - 'inter-font'
+
+  - 'cava'
+  - 'cups-pk-helper'
+  - 'i2c-tools'
+  - 'matugen'
+  - 'power-profiles-daemon'
+  - 'qt6-multimedia'
+  - 'qt6ct'
+  - 'wtype'
+  - 'cliphist'
+  - ''
+
 
 aur-packages: 
-  - 'dms-shell-hyprland'
+  - 'dsearch-git'
+  - 'dms-shell-git'
   - 'greetd-dms-greeter-git'
 
 services:
