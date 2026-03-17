@@ -1,0 +1,59 @@
+impl: 'https://github.com/VoidCatter/blendos-tracks/raw/master'
+
+track: 'blendos-base'
+
+packages:
+  - 'kitty'
+  - 'gparted'
+  - 'firefox'
+  - 'cosmic-files'
+  - 'cosmic-player'
+  - 'cosmic-text-editor'
+  - 'waydroid'
+  - 'waydroid-image'
+
+  - 'hyprland'
+  - 'pipewire'
+  - 'wireplumber'
+  - 'xdg-desktop-portal'
+  - 'xdg-desktop-portal-hyprland'
+
+  - 'cava'
+  - 'cups-pk-helper'
+  - 'i2c-tools'
+  - 'matugen'
+  - 'power-profiles-daemon'
+  - 'qt6-multimedia'
+  - 'qt6ct'
+  - 'wtype'
+  - 'cliphist'
+
+aur-packages: 
+  - 'dsearch-git'
+  - 'dms-shell-git'
+  - 'greetd-dms-greeter-git'
+
+services:
+  - 'power-profiles-daemon'
+  - 'greetd'
+
+commands:
+  - 'id greeter || useradd -r -s /usr/bin/nologin greeter'
+  - 'rm -f /usr/share/applications/Waydroid.desktop'    
+  - 'mkdir -p /etc/xdg/xdg-desktop-portal'
+  - 'mkdir -p /etc/greetd'
+
+  - |
+    cat << EOF > /usr/lib/tmpfiles.d/dms-greeter.conf
+    d /var/cache/dms-greeter 0755 greeter greeter -
+    EOF
+
+  - |
+    cat << EOF > /etc/greetd/config.toml
+    [terminal]
+    vt = 1
+
+    [default_session]
+    user = "greeter"
+    command = "/usr/bin/dms-greeter --command hyprland"
+    EOF
