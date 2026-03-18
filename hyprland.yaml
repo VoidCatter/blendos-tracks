@@ -79,3 +79,5 @@ commands:
     EOF
 
     systemctl --user add-wants hyprland-session.target dms
+    echo It is recommended to reboot your system before use
+    SCRIPT
